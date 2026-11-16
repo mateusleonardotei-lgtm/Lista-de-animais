@@ -1,0 +1,29 @@
+body {
+    background-color: #f2f4ed;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    border-bottom: 5px solid #a91e30;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    background-color: #e5efe2;
+    image-rendering: pixelated;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}

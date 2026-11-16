@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AnimalDex | Explore o mundo animal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                🔴 AnimalDex
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#animais">Animais</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container my-5">
+
+    <h2 class="text-center mb-4">
+        🔎 Pesquisar animais
+    </h2>
+
+    <div class="input-group">
+
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Digite o nome do animal..."
+        >
+
+        <button class="btn btn-danger">
+            Pesquisar
+        </button>
+
+    </div>
+
+</div>
+
+<div class="container my-5" id="animais">
+
+    <h2 class="mb-4">Conheça os animais</h2>
+
+    <div class="row g-4">
+
+        <!-- LEÃO -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100">
+
+                <img src="img/leao.png"
+                    class="card-img-top"
+                    alt="Leão">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        #001 - Leão
+                    </h5>
+
+                    <p class="card-text">
+                        Panthera leo
+                    </p>
+
+                    <span class="badge text-bg-warning">
+                        Mamífero
+                    </span>
+
+                    <button class="btn btn-danger mt-3 w-100">
+                        Conhecer animal
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOBO -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100">
+
+                <img src="img/lobo.png"
+                    class="card-img-top"
+                    alt="Lobo">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        #002 - Lobo
+                    </h5>
+
+                    <p class="card-text">
+                        Canis lupus
+                    </p>
+
+                    <span class="badge text-bg-info">
+                        Mamífero
+                    </span>
+
+                    <button class="btn btn-danger mt-3 w-100">
+                        Conhecer animal
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÁGUIA -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100">
+
+                <img src="img/aguia.png"
+                    class="card-img-top"
+                    alt="Águia">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        #003 - Águia
+                    </h5>
+
+                    <p class="card-text">
+                        Aquila chrysaetos
+                    </p>
+
+                    <span class="badge text-bg-primary">
+                        Ave
+                    </span>
+
+                    <button class="btn btn-danger mt-3 w-100">
+                        Conhecer animal
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
