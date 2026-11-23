@@ -7,6 +7,11 @@ body {
     border-bottom: 5px solid #a91e30;
 }
 
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+}
+
 .card {
     border-radius: 15px;
     overflow: hidden;
@@ -26,4 +31,26 @@ body {
 
 .btn-danger {
     background-color: #dc3545;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.card-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.card-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
 }
