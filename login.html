@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AnimalDex | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AnimalDex</a>
+        </div>
+    </nav>
+
+    <main class="container d-flex justify-content-center align-items-center py-5">
+
+        <div class="card shadow cadastro-card">
+
+            <div class="card-header bg-danger text-white text-center">
+                <h4>Entrar no AnimalDex</h4>
+            </div>
+
+            <div class="card-body p-4">
+
+                <form id="formLogin">
+
+                    <div class="mb-3">
+                        <label for="emailLogin" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="emailLogin" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="senhaLogin" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senhaLogin" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger w-100">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <p class="text-center mt-3 mb-0">
+                    Ainda não tem uma conta?
+                    <a href="cadastro.html">Cadastre-se</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

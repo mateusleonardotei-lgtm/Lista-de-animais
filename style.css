@@ -54,3 +54,33 @@ button {
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
 }
+
+.cadastro-container {
+min-height: 85vh;
+}
+
+.cadastro-card {
+width: 100%;
+max-width: 450px;
+border: none;
+border-radius: 12px;
+overflow: hidden;
+}
+
+.cadastro-card .card-header {
+padding: 20px;
+}
+
+.cadastro-card .card-header h3 {
+font-family: 'Press Start 2P', cursive;
+font-size: 18px;
+}
+
+.cadastro-card .form-control {
+padding: 12px;
+}
+
+.cadastro-card .btn {
+padding: 12px;
+font-weight: bold;
+}
