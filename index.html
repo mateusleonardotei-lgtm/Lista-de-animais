@@ -86,7 +86,7 @@
 
         <div class="col-12 col-md-6 col-lg-4">
 
-            <div class="card h-100 animal-card">
+            <div class="card h-100 animal-card" data-som="SFX_PRESS_AB.wav">
 
                 <img src="" class="card-img-top"  alt="Leão">
 
@@ -111,7 +111,7 @@
 
         <div class="col-12 col-md-6 col-lg-4">
 
-            <div class="card h-100 animal-card">
+            <div class="card h-100 animal-card" data-som="SFX_PRESS_AB.wav">
 
                 <img src="" class="card-img-top"  alt="Lobo">
 
@@ -134,7 +134,7 @@
 
         <div class="col-12 col-md-6 col-lg-4">
 
-            <div class="card h-100 animal-card">
+            <div class="card h-100 animal-card" data-som="SFX_PRESS_AB.wav">
 
                 <img src="" class="card-img-top" alt="Águia">
 
@@ -148,7 +148,7 @@
 
                     <button class="btn btn-danger mt-3 w-100"> Conhecer animal </button>
 
-                </div><script src="js/script.js"></script>
+                </div>
 
             </div>
 
@@ -160,7 +160,31 @@
 
 </div>
     
-    
+<!--Script do BootStrap para funcionar no celular-->
+
+<script src="https://jsdelivr.net"></script>
+
+<!--Script para implementar o áudio-->
+
+<script> const cards = document.querySelectorAll('.animal-card');
+let audioAtual = null;
+cards.forEach(card => { 
+    card.addEventListener('mouseenter', () => { 
+        const caminhoSom = card.getAttribute('data-som'); 
+        
+        if(audioAtual){ 
+            audioAtual.pause();
+            audioAtual.currentTime = 0;
+        } 
+        
+        audioAtual = new Audio(caminhoSom);
+        audioAtual.play().catch(() => {
+            console.log("Clique em qualquer lugar da página primeiro para liberar o som.")
+        })
+    }) 
+}) 
+</script>
+
 <!-- SOBRE -->
 
 <div class="container my-5" id="sobre">
