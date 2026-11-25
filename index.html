@@ -60,6 +60,8 @@
 
     </nav>
 
+    <button id="Desliga" class="btn-som" type="button">Desligar/ligar som</button>
+
     <!--Pesquisas-->
 
     <div class="container my-5">
@@ -183,6 +185,65 @@ cards.forEach(card => {
         })
     }) 
 }) 
+</script>
+
+<audio id="musica-fundo"  src="1-17. Accumula Town.mp3"></audio> 
+
+<script>
+    const audio = document.getElementById("musica-fundo");
+    const botao = document.getElementById("Desliga");
+
+    audio.volume = 0.35;
+    let desligadoPeloUsuario = false;
+
+    function atualizarBotao(){
+        const estaMutado = audio.muted || audio.paused;
+        botao.textContent = estaMutado ? "Ligar som" : "Desligar som";
+        botao.setAttribute("aria-pressed", String(estaMutado));
+    }
+
+    async function tentarTocar() {
+      if (desligadoPeloUsuario) return;
+      try {
+        await audio.play();
+      } catch (err) {
+        // Navegador bloqueou autoplay antes da primeira interação
+      }
+      atualizarBotao();
+    }
+
+    // 1. Tenta iniciar assim que a página carrega
+    window.addEventListener("DOMContentLoaded", tentarTocar);
+
+    // 2. Se o navegador bloqueou, inicia no primeiro clique/tecla/toque do usuário
+    ["pointerdown", "keydown"].forEach((evento) => {
+      document.addEventListener(
+        evento,
+        () => {
+          if (!desligadoPeloUsuario && audio.paused) {
+            tentarTocar();
+          }
+        },
+        { once: true }
+      );
+    });
+
+    // 3. Botão para desligar / ligar o som ambiente
+    botao.addEventListener("click", async () => {
+      if (!audio.paused && !audio.muted) {
+        audio.muted = true;
+        desligadoPeloUsuario = true;
+      } else {
+        desligadoPeloUsuario = false;
+        audio.muted = false;
+        try {
+          await audio.play();
+        } catch (err) {
+          // Falha ao reproduzir
+        }
+      }
+      atualizarBotao();
+    });
 </script>
 
 <!-- SOBRE -->
