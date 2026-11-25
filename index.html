@@ -96,7 +96,7 @@
 
                     <h5 class="card-title"> #001 - Leão </h5>
 
-                    <p class="card-text"> Panthera leo  </p>
+                    <p class="card-text"> <u>Panthera leo</u>  </p>
 
                     <span class="badge text-bg-warning"> Mamífero  </span>
 
@@ -121,7 +121,7 @@
 
                     <p class="card-text"> Canis lupus </p>
 
-                    <span class="badge text-bg-info"> Mamífero </span>
+                    <span class="badge text-bg-warning"> Mamífero </span>
 
                     <button class="btn btn-danger mt-3 w-100"> Conhecer animal </button>
 
@@ -180,6 +180,7 @@ cards.forEach(card => {
         } 
         
         audioAtual = new Audio(caminhoSom);
+        audioAtual.volume = 0.3;
         audioAtual.play().catch(() => {
             console.log("Clique em qualquer lugar da página primeiro para liberar o som.")
         })
@@ -187,13 +188,13 @@ cards.forEach(card => {
 }) 
 </script>
 
-<audio id="musica-fundo"  src="1-17. Accumula Town.mp3"></audio> 
+<audio id="musica-fundo"  src="1-17. Accumula Town.mp3" loop preload="auto"></audio> 
 
 <script>
     const audio = document.getElementById("musica-fundo");
     const botao = document.getElementById("Desliga");
 
-    audio.volume = 0.35;
+    audio.volume = 0.40;
     let desligadoPeloUsuario = false;
 
     function atualizarBotao(){
