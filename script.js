@@ -77,6 +77,8 @@ if (formCadastro) {
 
         formCadastro.reset();
 
+        window.location.href = "login.html"
+
     });
 
 }
